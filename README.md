@@ -1,5 +1,12 @@
 # Pomodoro Timer
 
+
+<p align = "center">
+
+<img src="https://github.com/Amina-Sagheer/pomodoro/assets/172102325/a74dbb3b-a36f-4ff8-868a-fb35290b1be0" alt="pomodoro_gif" width="500" height="500">
+
+</p>
+
 This is a Pomodoro Timer application built using Python and Tkinter. It helps manage work sessions and breaks using the Pomodoro Technique, improving productivity and focus.
 
 ## Features
