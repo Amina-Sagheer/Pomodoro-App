@@ -50,6 +50,7 @@ def start_timer():
         """
         Inner function to handle the last session, which is a longer break.
         """
+        label.config(text="BREAK")
         count_down(20 * 60)
 
     def start_break():
