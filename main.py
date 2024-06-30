@@ -26,8 +26,7 @@ def reset():
     Reset function to stop the timer and reset the display.
     """
     canvas.itemconfig(timer, text="00:00")
-    if TIMER is not None:
-        window.after_cancel(TIMER)
+    window.after_cancel(TIMER)
 
 
 def start_timer():
@@ -38,13 +37,11 @@ def start_timer():
         """
         Inner function to start a work session.
         """
+        label.config(text="TIMER")
         global i
         i += 1
         count_down(25 * 60)
-        if i < 4:
-            window.after(25 * 60 * 1000, start_break)
-        else:
-            window.after(25 * 60 * 1000, last_session)
+        window.after(25 * 60 * 1000, start_break)
 
     def last_session():
         """
@@ -61,10 +58,11 @@ def start_timer():
         count_down(5 * 60)
         window.after(5 * 60 * 1000, start_work)
 
-    if i < 4:
-        start_work()
-    else:
+    # Start the first work session
+    if i == 4:
         last_session()
+    else:
+        start_work()
 
 
 window = Tk()
